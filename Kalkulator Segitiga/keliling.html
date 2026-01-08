@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator Segitiga</title>
+</head>
+<div class="page-fade" id="pageFade"></div>
+<body>
+  <div class="layout-row">
+    <div class="container">
+      <div class="btn-menu"> 
+        <a href="index.html">
+          <button>Home</button>
+        </a>
+        <a href="luas.html">
+          <button>Luas</button>
+        </a> 
+         
+           <a href="sisiMiring.html">
+          <button>Sisi Miring</button>
+        </a>
+         <a href="trigonometri.html">
+            <button>Trigonometri</button>
+        </a>
+      </div>
+
+      <h1>HITUNG KELILING</h1>
+      <label for="sisi1"></label>
+      <input type="number" placeholder="Sisi 1" id="sisi1">
+      <label for="sisi2"></label>
+      <input type="number" placeholder="Sisi 2" id="sisi2">
+      <label for="sisi3"></label>
+      <input type="number" placeholder="Sisi 3" id="sisi3">
+      <button onclick="hitungKeliling()">Hitung</button>
+      <div id="output"></div>
+    </div>
+    <div class="note-k">
+      <div class="note">
+        <h2>Note :</h2>
+        <p>Untuk menghitung keliling segitiga, gunakan rumus:</p>
+        <p><strong>Keliling = Sisi 1 + Sisi 2 + Sisi 3</strong></p>
+        <p>Masukkan panjang ketiga sisi segitiga untuk mendapatkan hasil keliling.</p>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

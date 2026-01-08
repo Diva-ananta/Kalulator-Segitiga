@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator Trigonometri</title>
+</head>
+<body>
+    <div class="layout-row">
+        <div class="container">
+            <div class="btn-menu">
+                <a href="index.html"><button>Home</button></a>
+                <a href="keliling.html"><button>Keliling</button></a>
+                <a href="luas.html"><button>Luas</button></a>
+                <a href="sisiMiring.html"><button>Sisi Miring</button></a>
+            </div>
+            <h1>TRIGONOMETRI</h1>
+            <form id="mode-form" class="mode-form">
+    <label class="switch-label">
+        <input type="radio" name="mode" value="trig" checked>
+        <span class="switch-custom">Nilai Trigonometri</span>
+    </label>
+    <label class="switch-label">
+        <input type="radio" name="mode" value="sudut">
+        <span class="switch-custom">Hitung Sudut (Aturan Sinus/Cosinus)</span>
+    </label>
+</form>
+
+            <form id="trig-form" onsubmit="event.preventDefault(); hitungTrigonometri();">
+                <select id="satuan">
+                    <option value="deg">Derajat (°)</option>
+                    <option value="rad">Radian</option>
+                </select>
+                <input type="number" id="sudut" placeholder="Masukkan sudut">
+                <select id="fungsi">
+                    <option value="">-Pilih Fungsi-</option>
+                    <option value="sin">Sinus (sin)</option>
+                    <option value="cos">Cosinus (cos)</option>
+                    <option value="tan">Tangen (tan)</option>
+                    <option value="csc">Cosecan (csc)</option>
+                    <option value="sec">Secan (sec)</option>
+                    <option value="cot">Cotangen (cot)</option>
+                </select>
+                <button type="submit">Hitung</button>
+            </form>
+
+            <form id="aturan-form" style="display:none;" onsubmit="event.preventDefault(); hitungSudutAturan();">
+                <select id="metode">
+                    <option value="sinus">Aturan Sinus</option>
+                    <option value="cosinus">Aturan Cosinus</option>
+                </select>
+                <div id="input-sinus">
+                    <input type="number" id="a" placeholder="Sisi a">
+                    <input type="number" id="A" placeholder="Sudut A (°)">
+                    <input type="number" id="b" placeholder="Sisi b">
+                    <button type="button" onclick="hitungSudutAturan('sinus')">Hitung Sudut B</button>
+                </div>
+                <div id="input-cosinus" style="display:none;">
+                    <input type="number" id="a2" placeholder="Sisi a">
+                    <input type="number" id="b2" placeholder="Sisi b">
+                    <input type="number" id="c2" placeholder="Sisi c (di depan sudut C)">
+                    <button type="button" onclick="hitungSudutAturan('cosinus')">Hitung Sudut C</button>
+                </div>
+            </form>
+            <div id="output" class="output"></div>
+        </div>
+        <div class="note-t">
+            <div class="note">
+                <h2>Catatan:</h2>
+                <ul>
+                    <li><b>Nilai Trigonometri:</b> Masukkan sudut (° atau radian), pilih fungsi.</li>
+                    <li><b>Aturan Sinus:</b> a/sin A = b/sin B = c/sin C</li>
+                    <li><b>Aturan Cosinus:</b> c² = a² + b² - 2ab cos C</li>
+                </ul>
+                <p>Hasil otomatis dalam bentuk desimal dan bentuk sederhana (jika tersedia).</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator Segitiga</title>
+</head>
+<body>
+  <div class="layout-row">
+      <div class="container">
+        <div class="btn-menu">
+          <a href="index.html">
+            <button>Home</button>
+          </a>
+          <a href="keliling.html">
+            <button>Keliling</button>
+          </a>
+             <a href="sisiMiring.html">
+            <button>Sisi Miring</button>
+          </a> 
+          <a href="trigonometri.html">
+                    <button>Trigonometri</button>
+                </a> 
+        </div>
+
+        <h1>HITUNG LUAS</h1>
+        <label for="inputAlas"></label>
+        <input type="number" placeholder="Input Alas" id="inputAlas">
+        <label for="inputTinggi"></label>
+        <input type="number" placeholder="Input Tinggi" id="inputTinggi">
+        <button onclick="hitungLuas()">Hitung</button>
+        <div id="output"></div>
+      </div>
+
+      <div class="note-k">
+        <div class="note">
+          <h2>Note :</h2>
+          <p>Untuk menghitung luas segitiga, gunakan rumus:</p>
+          <p><strong>Luas = 1/2 × Alas × Tinggi</strong></p>
+          <p>Masukkan panjang alas dan tinggi segitiga untuk mendapatkan hasil luas.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

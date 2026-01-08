@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hypotanus</title>
+</head>
+<body>
+    <div class="layout-row">
+        <div class="container">
+            <div class="btn-menu">
+                <a href="index.html">
+                    <button>Home</button>
+                </a>
+                <a href="keliling.html">
+                    <button>Keliling</button>
+                </a>
+                <a href="luas.html">
+                    <button>Luas</button>
+                </a>
+                <a href="trigonometri.html">
+                    <button>Trigonometri</button>
+                </a>
+            </div>
+
+            <h1>HITUNG HYPOTANUSE</h1>
+            <label for="kaki1"></label>
+            <input type="number" id="kaki1" min="0" step="any" placeholder="Input Kaki 1">
+            <label for="kaki2"></label>
+            <input type="number" id="kaki2" min="0" step="any" placeholder="Input Kaki 2">
+            <button onclick="hitungHypotanus()">Hitung</button>
+            <div id="output" class="output"></div>
+        </div>
+
+        <div class="note-k">
+            <div class="note">
+                <h2>Note :</h2>
+                <p>Untuk menghitung panjang sisi miring segitiga, gunakan rumus:</p>
+                <p><strong>Hypotanus = √(Sisi Tegak² + Sisi Alas²)</strong></p>
+                <p>Masukkan panjang kedua kaki segitiga untuk mendapatkan hasil panjang sisi miring.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
